@@ -1,0 +1,41 @@
+EJEMPLO DE COMO CORRER EL PROYECTO  
+
+
+Se debe estar en la raíz del proyecto nbody_serial
+
+cd nbody_serial
+
+Para compilar y generar la carpeta build 
+
+bash build_nbody.sh
+
+Para correr el slurm que ejecuta el archivo .cpp
+
+sbatch nbody_seria_mpi.slurm
+
+Esto genera un archivo stdout y stderr 
+Respectivos archivos de respuesta de salida y error
+
+Para revisar ambos archivos
+
+cat stdout-findpi_mpi_179220
+cat stderr-findpi_mpi_179220
+
+
+------------------------------------------------------
+
+
+Para revisar ejecuciones en cola
+
+squeue
+
+
+Notas adicionales:
+
+En el archivo CMakelists.txt 
+
+# Add executable
+add_executable(nbody_problem nbody_serial_mpi.cpp)
+
+Se debe nombrar el archivo .cpp que se desea ejecutar
+
